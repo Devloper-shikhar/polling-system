@@ -37,9 +37,26 @@ Clone the repository or navigate to your project folder.
 
 Install the necessary dependencies using npm or yarn:
 
-bash
-Copy code
 npm install
+
+Dependencies
+Here’s a list of all the dependencies for this project:
+
+express: A minimal and flexible Node.js web application framework.
+kafka-node: A Node.js client for Kafka to communicate with Kafka brokers.
+ws: WebSocket implementation for real-time communication.
+docker-compose: Tool for defining and running multi-container Docker applications.
+pg: PostgreSQL client for Node.js, used for database interaction.
+dotenv: Module to load environment variables from a .env file.
+async: A utility module for working with asynchronous JavaScript.
+cors: Middleware to enable Cross-Origin Resource Sharing.
+To install these dependencies, run:
+
+
+npm install express kafka-node ws pg dotenv async cors
+
+
+
 Configure the backend to connect to PostgreSQL locally and Kafka in the Docker containers.
 
 PostgreSQL (Local Setup)
@@ -85,9 +102,9 @@ Ensure your WebSocket server is configured to run on port 8080 and that it can c
 Running the Project
 To run the entire project, including Zookeeper, Kafka, WebSocket, and the Node.js backend, use Docker Compose.
 
-From the root of your project, run the following command:
 
 docker-compose up --build
+
 This will:
 
 Start Zookeeper on port 2181
