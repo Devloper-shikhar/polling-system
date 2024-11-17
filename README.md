@@ -1,4 +1,5 @@
 Polling System with Kafka, Zookeeper, and WebSocket (Dockerized)
+
 This project implements a polling system with Kafka for message streaming, Zookeeper for Kafka coordination, and WebSocket for real-time updates. The entire setup, including Kafka, Zookeeper, and the WebSocket server, is Dockerized for easy deployment. PostgreSQL is used locally for database persistence.
 
 Table of Contents
@@ -17,6 +18,8 @@ Docker and Docker Compose (for container orchestration)
 Node.js (for backend development)
 npm or yarn (for managing Node.js packages)
 PostgreSQL running locally (for database persistence)
+
+
 Setup Instructions
 1. Setting up Zookeeper with Docker
 Zookeeper is required by Kafka for managing its metadata and maintaining coordination between Kafka nodes. You can run Zookeeper using Docker. The docker-compose.yml file below will handle the Zookeeper setup.
@@ -51,7 +54,7 @@ Replace <username> and <password> with your actual PostgreSQL username and passw
 Here’s the docker-compose.yml configuration for Kafka and Zookeeper:
 
 yaml
-Copy code
+
 version: '3.7'
 services:
   zookeeper:
@@ -84,8 +87,6 @@ To run the entire project, including Zookeeper, Kafka, WebSocket, and the Node.j
 
 From the root of your project, run the following command:
 
-bash
-Copy code
 docker-compose up --build
 This will:
 
