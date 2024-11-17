@@ -65,8 +65,11 @@ Since PostgreSQL is running locally, update the .env file to use the local Postg
 .env file configuration:
 
 KAFKA_BROKER=kafka:9092
+
 POSTGRES_URI=postgres://<username>:<password>@localhost:5432/polling-system
+
 Replace <username> and <password> with your actual PostgreSQL username and password.
+
 
 Here’s the docker-compose.yml configuration for Kafka and Zookeeper:
 
