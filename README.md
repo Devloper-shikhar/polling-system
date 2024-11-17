@@ -62,9 +62,15 @@ Configure the backend to connect to PostgreSQL locally and Kafka in the Docker c
 PostgreSQL (Local Setup)
 Since PostgreSQL is running locally, update the .env file to use the local PostgreSQL instance:
 
-.env file configuration:
+## Setting Up PostgreSQL Locally
 
-KAFKA_BROKER=kafka:9092
+### Step 1: Install PostgreSQL
+Ensure PostgreSQL is installed on your local machine. You can download it from [here](https://www.postgresql.org/download/).
+
+### Step 2: Create the Database
+Create a new database called `polling_system`:
+
+psql -U postgres -c "CREATE DATABASE polling_system;"
 
 POSTGRES_URI=postgres://<username>:<password>@localhost:5432/polling-system
 
